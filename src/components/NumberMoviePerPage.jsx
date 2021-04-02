@@ -21,7 +21,7 @@ const NumberMoviePerPage = ({ paginate, totalMovies }) => {
             paginate(options[0])
         } else {
             setCurrentPage(pre => pre - 1)
-            paginate(options(currentPage - 1))
+            paginate(options[currentPage - 1])
         }
     }
     const handleNextbtn = () => {
@@ -30,7 +30,7 @@ const NumberMoviePerPage = ({ paginate, totalMovies }) => {
             paginate(options[options.length - 1])
         } else {
             setCurrentPage(pre => pre + 1)
-            paginate(options(currentPage + 1))
+            paginate(options[currentPage + 1])
         }
     }
     return (
